@@ -58,7 +58,6 @@ profileButton.addEventListener("click", () => {
 // ############################### Close Banner ########################################################
 closeBanner.addEventListener("click", () => {
   bannerParent.classList.add("hidden__display");
-  mainCard.style.marginTop = "69px";
 });
 
 // ################################ Toggle MainAccordion ###############################################

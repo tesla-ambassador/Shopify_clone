@@ -27,6 +27,7 @@ ul {
 
 main {
   min-height: 100vh;
+  padding-top: 30px;
 }
 
 li {
@@ -58,6 +59,10 @@ a {
   font-weight: 500;
 }
 
+button:focus {
+  outline: #005bd3;
+}
+
 /* ********************************************* Navigation Bar ************************************** */
 nav {
   background-color: #1c181d;
@@ -81,7 +86,6 @@ label {
   min-width: 11.719rem;
   padding: 8px 10px 8px 30px;
   border-radius: 5px;
-  outline: none;
   border-style: solid;
   border-width: 1px;
   border-color: #616161;
@@ -95,6 +99,7 @@ label {
 .search__input:hover,
 .search__input:focus {
   border-color: #e1e1e1;
+  outline: #005bd3;
 }
 
 .search__icon__div {
@@ -266,7 +271,6 @@ label {
 
 /* ********************************** Banner  ******************************************* */
 .banner__section {
-  margin-top: 30px;
   background-color: #1a1a1a;
   color: #e3e3e3;
   display: flex;
@@ -380,8 +384,21 @@ label {
   gap: 10px;
 }
 .article__button {
-  background-color: #1a1a1a;
+  background-color: #404040;
   color: #ffffff;
+  position: relative;
+}
+.article__button::before {
+  content: "";
+  height: 90%;
+  width: 97%;
+  background: #333333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 3px;
+  z-index: -1;
 }
 .show__display__article {
   display: block;
@@ -450,10 +467,11 @@ label {
   position: fixed;
   top: 60px;
   width: 100%;
+  z-index: 5;
 }
 
 .button__big {
-  padding: 5px 10px;
+  padding: 8px 10px;
   border-radius: 5px;
   border: none;
   font-size: 13px;
@@ -550,9 +568,6 @@ label {
   height: 98vh;
 }
 
-.dont__scroll {
-  overflow: hidden;
-}
 /* *********************************** Media Queries ************************************ */
 
 /* Mobile lg */
